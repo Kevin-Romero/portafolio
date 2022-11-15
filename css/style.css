@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 :root{
     --blueColor: #97dffcff;
     --darkColor: #222222ff;
@@ -9,10 +11,24 @@
 
     /* Z-INDEX */
     --z-back: -10;
-    --z-normal: 1;
+    --z-normal: 2;
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
+
+    /* LETRAS */
+    --bigger-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.4375rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1.0625rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.8rem;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
 }
 
 header{
@@ -26,10 +42,7 @@ header nav {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-}
-
-nav .logo{
-    padding: 15px;
+    z-index: var(--z-normal);
 }
 
 nav ul {
@@ -39,19 +52,29 @@ nav ul {
     align-items: center;
 }
 
-nav ul li a{
+nav ul li a, nav .logo a{
     padding: 15px;
+    font-size: var(--normal-font-size);
+    color: var(--grayColor);
+    text-decoration: none;
+    opacity: .5;
+}
+
+nav ul li a:hover, nav .logo a:hover{
+    opacity: 1;
 }
 
 main .imgBackground img{
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    filter: blur(2px);
+    z-index: var(--z-back);
 }
-
 main {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 main .imgBackground::before{
@@ -61,11 +84,48 @@ main .imgBackground::before{
     background-color: var(--darkColor);
     opacity: 0.7;
     position: absolute;
+    z-index: 1;
 }
 
 main .titleMain{
     position: absolute;
     width: 100%;
-    height: 100%;
     text-align: center;
+    top: 50%;
+    z-index: var(--z-normal);
+}
+
+.titleMain h1, .titleMain h2, .titleMain h3{
+    text-align: left;
+    margin-left: 150px;
+}
+
+.titleMain h3{
+    font-size: var(--h2-font-size);
+    color: var(--secundaryColor);
+}
+
+.titleMain h1, .titleMain h2{
+    font-size: var(--bigger-font-size);
+    color: var(--whiteColor);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.arrowDown svg{
+    width: 100px;
+    height: 40px;
+    color: var(--whiteColor);
+    animation: move 3s infinite ease-in-out;
+    z-index: var(--z-normal);
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+}
+
+
+@keyframes move{
+    0%{bottom:50px;}
+    50%{bottom:100px;}
+    100%{bottom:50px;}
 }
