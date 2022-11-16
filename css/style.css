@@ -27,13 +27,15 @@
     --smaller-font-size: 0.8rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
 
-header{
-    width: 100%;
-}
+/* MENU */
 
 header nav {
     width: 100%;
@@ -41,8 +43,8 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    z-index: var(--z-normal);
+    position:fixed;
+    z-index: var(--z-tooltip);
 }
 
 nav ul {
@@ -64,6 +66,9 @@ nav ul li a:hover, nav .logo a:hover{
     opacity: 1;
 }
 
+/* MENU */
+
+/* HOME */
 main .imgBackground img{
     width: 100%;
     height: 100vh;
@@ -71,6 +76,7 @@ main .imgBackground img{
     filter: blur(2px);
     z-index: var(--z-back);
 }
+
 main {
     width: 100%;
     height: 100vh;
@@ -93,11 +99,13 @@ main .titleMain{
     text-align: center;
     top: 50%;
     z-index: var(--z-normal);
+    overflow: hidden;
 }
 
 .titleMain h1, .titleMain h2, .titleMain h3{
+    width: 100%;
     text-align: left;
-    margin-left: 150px;
+    margin-left: 50px;
 }
 
 .titleMain h3{
@@ -116,7 +124,7 @@ main .titleMain{
     width: 100px;
     height: 40px;
     color: var(--whiteColor);
-    animation: move 3s infinite ease-in-out;
+    animation: move 3s ease-in-out infinite ;
     z-index: var(--z-normal);
     position: absolute;
     left: 50%;
@@ -125,7 +133,67 @@ main .titleMain{
 
 
 @keyframes move{
-    0%{bottom:50px;}
-    50%{bottom:100px;}
-    100%{bottom:50px;}
+    0%{bottom:50px; opacity: 0;}
+    50%{bottom:100px; opacity: 1;}
+    100%{bottom:50px; opacity: 0;}
 }
+
+/* HOME */
+
+/* QUIEN SOY */
+#quiensoy{
+    margin: auto;
+    padding: 50px;
+    background-color: var(--whiteColor);
+    display: flex;
+    justify-content: center;
+    align-items:flex-start; 
+    overflow: hidden;
+}
+
+#quiensoy .imgContainer img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 5px 6px 14px 4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 5px 6px 14px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 6px 14px 4px rgba(0,0,0,0.5);
+}
+
+#quiensoy .content {
+    width: 50%;
+    margin-left: 50px;
+}
+
+.titleContent{
+    font-size: var(--bigger-font-size);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#quiensoy h3{
+    color: var(--primaryColor);
+}
+
+
+
+#quiensoy .content p{
+    font-size: var(--normal-font-size);
+    line-height : 25px;
+    margin-bottom: 25px;
+}
+
+.btnDownloadCV a{
+    text-decoration: none;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    padding: 15px;
+    border-radius: 10px;
+    opacity: .7;
+}
+
+.btnDownloadCV a:hover{
+    opacity: 1;
+}
+
