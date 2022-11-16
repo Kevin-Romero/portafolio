@@ -197,3 +197,46 @@ main .titleMain{
     opacity: 1;
 }
 
+/* SKILLS */
+
+#skills{
+    padding: 50px;
+    background-color: var(--grayColor);
+    color: var(--whiteColor);
+}
+
+#skills .titleContent{
+    color: var(--darkColor);
+}
+
+#skills .svgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#skills .svgContainer img{
+    width: 70px;
+}
+
+.svgContainer .card{
+    width: 90px;
+    height: 100px;
+    margin-right: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--darkColor);
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+.svgContainer .card:hover{
+    transform: translateY(-1rem) scale(1.03);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 15%);
+}
