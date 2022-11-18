@@ -35,6 +35,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+img{
+    width: 100%;
+}
+
 /* MENU */
 
 header nav {
@@ -240,3 +244,98 @@ main .titleMain{
     transform: translateY(-1rem) scale(1.03);
     box-shadow: 0 6px 12px rgb(0 0 0 / 15%);
 }
+
+/* CARDS */
+
+
+#portafolio{
+    padding: 50px;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.cardContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cardContainer .card{
+    width: 600px;
+    height: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 10px;
+    color: var(--darkColor);
+    margin: 10px;
+}
+
+.leftContent{
+    width: 50%;
+    height: 100%;
+    z-index: var(--z-normal);
+}
+
+.rightContent{
+    width: 50%;
+    height: 100%;
+    background-color: var(--whiteColor);
+    padding: 15px;
+    position: relative;
+}
+
+.card .leftContent img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .rightContent h3{
+    font-size: var(--h1-font-size);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rightContent p{
+    font-size: var(--normal-font-size);
+    line-height : 25px;
+    margin-bottom: 10px;
+}
+
+.card .rightContent img{
+    width: 30px;
+    opacity: .5;
+}
+
+.card .rightContent img:hover{
+    opacity: 1;
+}
+
+.tags{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 30px;
+}
+
+.tags p{
+    margin-right: 10px;
+    color: var(--darkColor);
+    opacity: .5;
+    font-size: var(--small-font-size);
+    line-height: 10px;
+    background-color: var(--grayColor);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+
+/* CARDS */
