@@ -341,8 +341,8 @@ main .titleMain{
 
 #contacto{
     padding: 50px;
-    background: var(--darkColor);
-    color: var(--whiteColor);
+    background: var(--blueColor);
+    color: var(--darkColor);
 }
 
 .socialContent{
@@ -354,10 +354,10 @@ main .titleMain{
 
 #contacto .socialContent a{
     padding: 10px;
-    color: var(--whiteColor);
+    color: var(--darkColor);
     border-radius: 10px;
     text-decoration: none;
-    background-color: var(--secundaryColor);
+    background-color: var(--whiteColor);
     margin-left: 10px;
     opacity: 0.7;
 }
@@ -367,7 +367,7 @@ main .titleMain{
 }
 
 footer{
-    padding: 10px;
+    padding: 20px;
     color: var(--whiteColor);
     background-color: var(--darkColor);
     font-size: var(--normal-font-size);
