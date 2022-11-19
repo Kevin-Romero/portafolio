@@ -49,6 +49,7 @@ header nav {
     align-items: center;
     position:fixed;
     z-index: var(--z-tooltip);
+    transition: all .25s ease;
 }
 
 nav ul {
@@ -68,6 +69,10 @@ nav ul li a, nav .logo a{
 
 nav ul li a:hover, nav .logo a:hover{
     opacity: 1;
+}
+
+.scrollMenu{
+    background-color: rgba(0,0,0,0.7);
 }
 
 /* MENU */
