@@ -335,7 +335,43 @@ main .titleMain{
     border-radius: 10px;
 }
 
-
-
-
 /* CARDS */
+
+/* CONTACTO */
+
+#contacto{
+    padding: 50px;
+    background: var(--darkColor);
+    color: var(--whiteColor);
+}
+
+.socialContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--normal-font-size);
+}
+
+#contacto .socialContent a{
+    padding: 10px;
+    color: var(--whiteColor);
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--secundaryColor);
+    margin-left: 10px;
+    opacity: 0.7;
+}
+
+#contacto .socialContent a:hover{
+    opacity: 1;
+}
+
+footer{
+    padding: 10px;
+    color: var(--whiteColor);
+    background-color: var(--darkColor);
+    font-size: var(--normal-font-size);
+    text-align: center;
+}
+
+/* CONTACTO */
