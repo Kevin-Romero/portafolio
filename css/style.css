@@ -395,6 +395,11 @@ footer{
         justify-content: space-evenly;
     }
 
+    .titleMain h1, .titleMain h2, .titleMain h3{
+        text-align: center;
+        margin-left: 0px;
+    }
+
     #quiensoy .imgContainer{
         display: none;
     }
