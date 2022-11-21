@@ -90,7 +90,7 @@ main {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
+} 
 
 main .imgBackground::before{
     content: '';
@@ -130,14 +130,12 @@ main .titleMain{
 }
 
 .arrowDown svg{
-    width: 100px;
     height: 40px;
     color: var(--whiteColor);
     animation: move 3s ease-in-out infinite ;
     z-index: var(--z-normal);
     position: absolute;
-    left: 50%;
-    bottom: 50px;
+    right: 50%;
 }
 
 
