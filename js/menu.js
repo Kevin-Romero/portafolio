@@ -1,5 +1,5 @@
 const menu = document.querySelector("#menu");
-const altura = document.querySelector("#quiensoy").offsetTop;
+let altura = document.querySelector("#quiensoy").offsetTop;
 
 window.addEventListener("scroll", () => {
     if(window.pageYOffset > (altura - 1)){

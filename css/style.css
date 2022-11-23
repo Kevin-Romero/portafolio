@@ -239,7 +239,6 @@ main .titleMain{
     border-radius: 10px;
     color: var(--darkColor);
     cursor: pointer;
-    transition: all .25s ease-in-out;
 }
 
 .svgContainer .card:hover{
@@ -381,6 +380,53 @@ footer{
     text-align: center;
 }
 
+
+/* EFECTO FADE */
+
+.fade{
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.fadeUp{
+    transform: translateY(60%);
+}
+
+.fadeDown{
+    transform: translateY(-60%);
+}
+
+.fadeLeft{
+    transform: translateX(-30%);
+}
+
+.fadeRight{
+    transform: translateX(30%);
+}
+
+.showFade{
+    opacity: 1;
+    transform: none;
+}
+
+/* EFECTO FADE */
+
+/* EFECTO POP UP */
+
+.popUp{
+    opacity: 0;
+    transform: scale(0%);
+    transition: all .25s ease;
+}
+
+.showPopUp{
+    opacity: 1;
+    transform: scale(100%);
+}
+
+/* EFECTO POP UP */
+
+
 /* CONTACTO */
 
 @media (max-width: 955px) {
@@ -438,3 +484,4 @@ footer{
         margin-top: 10px;
     }
 }
+
