@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
 
             element[i].classList.add(`fade${position}`);
 
-            if(element[i].getBoundingClientRect().top <= (window.innerHeight/1.2)){
+            if(element[i].getBoundingClientRect().top <= (window.innerHeight/1.3)){
                 element[i].classList.add(`showFade`);
             }else{
                 element[i].classList.remove(`showFade`);
